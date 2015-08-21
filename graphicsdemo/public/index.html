@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://rawgit.com/kangax/fabric.js/master/dist/fabric.js"></script>
+</head>
+<body>
+    <canvas id="c" width="800" height="600" style="border:1px solid #ccc"></canvas>
+    <script>
+      (function() {
+
+          var canvas = new fabric.Canvas('c');
+          var rect = new fabric.Rect({
+              left: 100,
+              top: 100,
+              borderColor: 'green',
+//              backgroundColor: 'blue',
+              width: 120,
+              height: 120,
+              angle: 25
+          });
+
+          rect.set({ strokeWidth: 5, stroke: 'rgba(100,200,200,0.5)' });
+          rect.set('fill', 'white');
+
+          canvas.add(rect);
+
+//          rect.setVisible(true);
+//          rect.set('angle', 15).set('flipY', true);
+      })();
+    </script>
+</body>
+</html>
